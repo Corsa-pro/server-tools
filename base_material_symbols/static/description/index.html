@@ -1,0 +1,549 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils: https://docutils.sourceforge.io/" />
+<title>README.rst</title>
+<style type="text/css">
+
+/*
+:Author: David Goodger (goodger@python.org)
+:Id: $Id: html4css1.css 9511 2024-01-13 09:50:07Z milde $
+:Copyright: This stylesheet has been placed in the public domain.
+
+Default cascading style sheet for the HTML output of Docutils.
+Despite the name, some widely supported CSS2 features are used.
+
+See https://docutils.sourceforge.io/docs/howto/html-stylesheets.html for how to
+customize this style sheet.
+*/
+
+/* used to remove borders from tables and images */
+.borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "! important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 ! important }
+
+.first {
+  /* Override more specific margin styles with "! important". */
+  margin-top: 0 ! important }
+
+.last, .with-subtitle {
+  margin-bottom: 0 ! important }
+
+.hidden {
+  display: none }
+
+.subscript {
+  vertical-align: sub;
+  font-size: smaller }
+
+.superscript {
+  vertical-align: super;
+  font-size: smaller }
+
+a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+blockquote.epigraph {
+  margin: 2em 5em ; }
+
+dl.docutils dd {
+  margin-bottom: 0.5em }
+
+object[type="image/svg+xml"], object[type="application/x-shockwave-flash"] {
+  overflow: hidden;
+}
+
+/* Uncomment (and remove this text!) to get bold-faced definition list terms
+dl.docutils dt {
+  font-weight: bold }
+*/
+
+div.abstract {
+  margin: 2em 5em }
+
+div.abstract p.topic-title {
+  font-weight: bold ;
+  text-align: center }
+
+div.admonition, div.attention, div.caution, div.danger, div.error,
+div.hint, div.important, div.note, div.tip, div.warning {
+  margin: 2em ;
+  border: medium outset ;
+  padding: 1em }
+
+div.admonition p.admonition-title, div.hint p.admonition-title,
+div.important p.admonition-title, div.note p.admonition-title,
+div.tip p.admonition-title {
+  font-weight: bold ;
+  font-family: sans-serif }
+
+div.attention p.admonition-title, div.caution p.admonition-title,
+div.danger p.admonition-title, div.error p.admonition-title,
+div.warning p.admonition-title, .code .error {
+  color: red ;
+  font-weight: bold ;
+  font-family: sans-serif }
+
+/* Uncomment (and remove this text!) to get reduced vertical space in
+   compound paragraphs.
+div.compound .compound-first, div.compound .compound-middle {
+  margin-bottom: 0.5em }
+
+div.compound .compound-last, div.compound .compound-middle {
+  margin-top: 0.5em }
+*/
+
+div.dedication {
+  margin: 2em 5em ;
+  text-align: center ;
+  font-style: italic }
+
+div.dedication p.topic-title {
+  font-weight: bold ;
+  font-style: normal }
+
+div.figure {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+div.line-block {
+  display: block ;
+  margin-top: 1em ;
+  margin-bottom: 1em }
+
+div.line-block div.line-block {
+  margin-top: 0 ;
+  margin-bottom: 0 ;
+  margin-left: 1.5em }
+
+div.sidebar {
+  margin: 0 0 0.5em 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+div.system-messages {
+  margin: 5em }
+
+div.system-messages h1 {
+  color: red }
+
+div.system-message {
+  border: medium outset ;
+  padding: 1em }
+
+div.system-message p.system-message-title {
+  color: red ;
+  font-weight: bold }
+
+div.topic {
+  margin: 2em }
+
+h1.section-subtitle, h2.section-subtitle, h3.section-subtitle,
+h4.section-subtitle, h5.section-subtitle, h6.section-subtitle {
+  margin-top: 0.4em }
+
+h1.title {
+  text-align: center }
+
+h2.subtitle {
+  text-align: center }
+
+hr.docutils {
+  width: 75% }
+
+img.align-left, .figure.align-left, object.align-left, table.align-left {
+  clear: left ;
+  float: left ;
+  margin-right: 1em }
+
+img.align-right, .figure.align-right, object.align-right, table.align-right {
+  clear: right ;
+  float: right ;
+  margin-left: 1em }
+
+img.align-center, .figure.align-center, object.align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table.align-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.align-left {
+  text-align: left }
+
+.align-center {
+  clear: both ;
+  text-align: center }
+
+.align-right {
+  text-align: right }
+
+/* reset inner alignment in figures */
+div.align-right {
+  text-align: inherit }
+
+/* div.align-center * { */
+/*   text-align: left } */
+
+.align-top    {
+  vertical-align: top }
+
+.align-middle {
+  vertical-align: middle }
+
+.align-bottom {
+  vertical-align: bottom }
+
+ol.simple, ul.simple {
+  margin-bottom: 1em }
+
+ol.arabic {
+  list-style: decimal }
+
+ol.loweralpha {
+  list-style: lower-alpha }
+
+ol.upperalpha {
+  list-style: upper-alpha }
+
+ol.lowerroman {
+  list-style: lower-roman }
+
+ol.upperroman {
+  list-style: upper-roman }
+
+p.attribution {
+  text-align: right ;
+  margin-left: 50% }
+
+p.caption {
+  font-style: italic }
+
+p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+p.label {
+  white-space: nowrap }
+
+p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+p.topic-title {
+  font-weight: bold }
+
+pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+pre.literal-block, pre.doctest-block, pre.math, pre.code {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+pre.code .ln { color: gray; } /* line numbers */
+pre.code, code { background-color: #eeeeee }
+pre.code .comment, code .comment { color: #5C6576 }
+pre.code .keyword, code .keyword { color: #3B0D06; font-weight: bold }
+pre.code .literal.string, code .literal.string { color: #0C5404 }
+pre.code .name.builtin, code .name.builtin { color: #352B84 }
+pre.code .deleted, code .deleted { background-color: #DEB0A1}
+pre.code .inserted, code .inserted { background-color: #A3D289}
+
+span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+span.interpreted {
+  font-family: sans-serif }
+
+span.option {
+  white-space: nowrap }
+
+span.pre {
+  white-space: pre }
+
+span.problematic, pre.problematic {
+  color: red }
+
+span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 80% }
+
+table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+table.docinfo {
+  margin: 2em 4em }
+
+table.docutils {
+  margin-top: 0.5em ;
+  margin-bottom: 0.5em }
+
+table.footnote {
+  border-left: solid 1px black;
+  margin-left: 1px }
+
+table.docutils td, table.docutils th,
+table.docinfo td, table.docinfo th {
+  padding-left: 0.5em ;
+  padding-right: 0.5em ;
+  vertical-align: top }
+
+table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+/* "booktabs" style (no vertical lines) */
+table.docutils.booktabs {
+  border: 0px;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  border-collapse: collapse;
+}
+table.docutils.booktabs * {
+  border: 0px;
+}
+table.docutils.booktabs th {
+  border-bottom: thin solid;
+  text-align: left;
+}
+
+h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+ul.auto-toc {
+  list-style-type: none }
+
+</style>
+</head>
+<body>
+<div class="document">
+
+
+<a class="reference external image-reference" href="https://odoo-community.org/get-involved?utm_source=readme">
+<img alt="Odoo Community Association" src="https://odoo-community.org/readme-banner-image" />
+</a>
+<div class="section" id="material-symbols">
+<h1>Material Symbols</h1>
+<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!! This file is generated by oca-gen-addon-readme !!
+!! changes will be overwritten.                   !!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!! source digest: sha256:a7307fd4dc6273cfd8e48a2de9ace313efef700a2ac5efeaa3723e6b8fac5219
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+<p><a class="reference external image-reference" href="https://odoo-community.org/page/development-status"><img alt="Beta" src="https://img.shields.io/badge/maturity-Beta-yellow.png" /></a> <a class="reference external image-reference" href="http://www.gnu.org/licenses/lgpl-3.0-standalone.html"><img alt="License: LGPL-3" src="https://img.shields.io/badge/license-LGPL--3-blue.png" /></a> <a class="reference external image-reference" href="https://github.com/OCA/server-tools/tree/19.0/base_material_symbols"><img alt="OCA/server-tools" src="https://img.shields.io/badge/github-OCA%2Fserver--tools-lightgray.png?logo=github" /></a> <a class="reference external image-reference" href="https://translation.odoo-community.org/projects/server-tools-19-0/server-tools-19-0-base_material_symbols"><img alt="Translate me on Weblate" src="https://img.shields.io/badge/weblate-Translate%20me-F47D42.png" /></a> <a class="reference external image-reference" href="https://runboat.odoo-community.org/builds?repo=OCA/server-tools&amp;target_branch=19.0"><img alt="Try me on Runboat" src="https://img.shields.io/badge/runboat-Try%20me-875A7B.png" /></a></p>
+<p>Adds Google’s complete <strong>Material Symbols</strong> icon set to Odoo: about
+4,000 icons, against the 482 that Odoo 20 ships and none in Odoo 19.</p>
+<p>Icons are written the way Odoo 20 writes them:</p>
+<pre class="code xml literal-block">
+<span class="nt">&lt;i</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;oi&quot;</span><span class="w"> </span><span class="na">data-icon=</span><span class="s">&quot;sports_motorsports&quot;</span><span class="nt">/&gt;</span><span class="w">
+</span><span class="nt">&lt;i</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;oi oi-filled oi-lg&quot;</span><span class="w"> </span><span class="na">data-icon=</span><span class="s">&quot;flag&quot;</span><span class="nt">/&gt;</span>
+</pre>
+<ul class="simple">
+<li><strong>On Odoo 19</strong> this markup works as it will on 20, so modules written
+now keep working after the upgrade. Odoo 19’s own icons
+(<tt class="docutils literal">oi <span class="pre">oi-search</span></tt>, Font Awesome) are untouched.</li>
+<li><strong>On Odoo 20</strong> the complete font takes the place of Odoo’s 482-icon
+subset under the same name, so every Material Symbol works everywhere
+Odoo 20 draws icons, including <tt class="docutils literal"><span class="pre">icon=&quot;...&quot;</span></tt> on buttons.</li>
+</ul>
+<p>The font comes in Google’s three styles, <strong>Outlined, Rounded and
+Sharp</strong>, at weight 400, grade 0 and 24 px optical size as in Odoo 20,
+with their fill axis (<tt class="docutils literal"><span class="pre">oi-filled</span></tt>). Each company chooses its style;
+with <tt class="docutils literal">website_material_symbols</tt>, each website can choose its own. A
+browser only downloads the style in use (440 to 540 KB in WOFF2), once,
+and only on pages that draw a symbol.</p>
+<p>For other modules the module also provides:</p>
+<ul class="simple">
+<li>the list of icon names with their aliases
+(<tt class="docutils literal">static/lib/material_symbols/symbols.json</tt>);</li>
+<li>in Python, <tt class="docutils literal">is_material_symbol(name)</tt> and <tt class="docutils literal">symbol_names()</tt> from
+<tt class="docutils literal">odoo.addons.base_material_symbols.tools</tt>, to validate a name;</li>
+<li>in JavaScript, <tt class="docutils literal">loadMaterialSymbols()</tt> from
+<tt class="docutils literal">&#64;base_material_symbols/js/material_symbols.esm</tt>;</li>
+<li>a “Material Symbols” tab in the icon picker of
+<tt class="docutils literal">web_widget_icon_picker</tt>, when that module is installed (neither
+module depends on the other);</li>
+<li>a PNG of any symbol, for places that cannot load the font, such as
+emails:
+<tt class="docutils literal"><span class="pre">/base_material_symbols/icon/&lt;style&gt;/&lt;fill&gt;/&lt;name&gt;/&lt;color&gt;/&lt;background&gt;/&lt;width&gt;x&lt;height&gt;</span></tt>,
+colors URL-encoded (<tt class="docutils literal">rgb(113%2C%2075%2C%20103)</tt>, <tt class="docutils literal"><span class="pre">rgba(...)</span></tt> or a
+hex code).</li>
+</ul>
+<p><strong>HTML fields.</strong> Odoo 19’s HTML sanitizer drops the attributes it does
+not know, <tt class="docutils literal"><span class="pre">data-icon</span></tt> among them, so Material Symbols vanished from
+HTML fields and chatter messages when saved. The module allows
+<tt class="docutils literal"><span class="pre">data-icon</span></tt>, as Odoo 20 does.</p>
+<p><strong>Companion modules</strong>, each installed automatically with its apps:</p>
+<ul class="simple">
+<li><tt class="docutils literal">website_material_symbols</tt>: a style per website;</li>
+<li><tt class="docutils literal">html_editor_material_symbols</tt>: Material Symbols in the editor’s
+Icons tab (website builder, HTML fields);</li>
+<li><tt class="docutils literal">mail_material_symbols</tt>: symbols sent as images in emails;</li>
+<li><tt class="docutils literal">mass_mailing_material_symbols</tt>: the same in Email Marketing.</li>
+</ul>
+<p><strong>Table of contents</strong></p>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><a class="reference internal" href="#configuration" id="toc-entry-1">Configuration</a></li>
+<li><a class="reference internal" href="#usage" id="toc-entry-2">Usage</a></li>
+<li><a class="reference internal" href="#known-issues-roadmap" id="toc-entry-3">Known issues / Roadmap</a></li>
+<li><a class="reference internal" href="#bug-tracker" id="toc-entry-4">Bug Tracker</a></li>
+<li><a class="reference internal" href="#credits" id="toc-entry-5">Credits</a><ul>
+<li><a class="reference internal" href="#authors" id="toc-entry-6">Authors</a></li>
+<li><a class="reference internal" href="#contributors" id="toc-entry-7">Contributors</a></li>
+<li><a class="reference internal" href="#other-credits" id="toc-entry-8">Other credits</a></li>
+<li><a class="reference internal" href="#maintainers" id="toc-entry-9">Maintainers</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="configuration">
+<h2><a class="toc-backref" href="#toc-entry-1">Configuration</a></h2>
+<p>Go to <strong>Settings &gt; General Settings &gt; Companies</strong> and choose the <strong>Icon
+Style</strong>: Outlined (the default, as in Odoo 20), Rounded or Sharp. The
+style is the company’s: with several companies, each can have its own,
+and the backend draws the icons in the style of the active company.</p>
+<p>To give a website another style, install <tt class="docutils literal">website_material_symbols</tt>
+(it installs itself with Website) and set it under <strong>Website &gt;
+Configuration &gt; Settings</strong>.</p>
+</div>
+<div class="section" id="usage">
+<h2><a class="toc-backref" href="#toc-entry-2">Usage</a></h2>
+<p>Write an icon in a view, a QWeb template or an Owl component:</p>
+<pre class="code xml literal-block">
+<span class="nt">&lt;i</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;oi&quot;</span><span class="w"> </span><span class="na">data-icon=</span><span class="s">&quot;local_gas_station&quot;</span><span class="w"> </span><span class="na">title=</span><span class="s">&quot;Fuel&quot;</span><span class="nt">/&gt;</span>
+</pre>
+<p>Helper classes, as in Odoo 20:</p>
+<ul class="simple">
+<li><tt class="docutils literal"><span class="pre">oi-filled</span></tt>: the filled version of the icon;</li>
+<li>sizes <tt class="docutils literal"><span class="pre">oi-sm</span></tt>, <tt class="docutils literal"><span class="pre">oi-lg</span></tt>, <tt class="docutils literal"><span class="pre">oi-2x</span></tt> to <tt class="docutils literal"><span class="pre">oi-10x</span></tt>;</li>
+<li><tt class="docutils literal"><span class="pre">oi-rotate-90</span></tt>, <tt class="docutils literal"><span class="pre">oi-rotate-180</span></tt>, <tt class="docutils literal"><span class="pre">oi-rotate-270</span></tt>,
+<tt class="docutils literal"><span class="pre">oi-flip-horizontal</span></tt>, <tt class="docutils literal"><span class="pre">oi-flip-vertical</span></tt>;</li>
+<li><tt class="docutils literal"><span class="pre">oi-stack</span></tt>, <tt class="docutils literal"><span class="pre">oi-stack-1x</span></tt>, <tt class="docutils literal"><span class="pre">oi-stack-2x</span></tt> to stack two icons.</li>
+</ul>
+<p>Odoo 19’s <tt class="docutils literal"><span class="pre">oi-fw</span></tt>, <tt class="docutils literal"><span class="pre">oi-spin</span></tt> and <tt class="docutils literal"><span class="pre">oi-pulse</span></tt> work on these icons
+too.</p>
+<p>Browse the names at <a class="reference external" href="https://fonts.google.com/icons">https://fonts.google.com/icons</a> (Material Symbols).
+Use the icon’s name with underscores, e.g. <tt class="docutils literal">directions_car</tt>. The style
+(Outlined, Rounded or Sharp) is not part of the markup: it is chosen per
+company, and per website.</p>
+<p>To validate a name in Python:</p>
+<pre class="code python literal-block">
+<span class="kn">from</span><span class="w"> </span><span class="nn">odoo.addons.base_material_symbols.tools</span><span class="w"> </span><span class="kn">import</span> <span class="n">is_material_symbol</span><span class="w">
+
+</span><span class="k">if</span> <span class="ow">not</span> <span class="n">is_material_symbol</span><span class="p">(</span><span class="n">record</span><span class="o">.</span><span class="n">icon</span><span class="p">):</span><span class="w">
+</span>    <span class="k">raise</span> <span class="n">ValidationError</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+</pre>
+</div>
+<div class="section" id="known-issues-roadmap">
+<h2><a class="toc-backref" href="#toc-entry-3">Known issues / Roadmap</a></h2>
+<ul class="simple">
+<li>PDF reports: wkhtmltopdf does not apply font ligatures, so
+<tt class="docutils literal"><span class="pre">data-icon</span></tt> markup does not draw in reports yet. The PNG route draws
+any symbol; turning report markup into those images is not done yet.</li>
+<li>Odoo 20’s <tt class="docutils literal">oi_*</tt> icon names (Odoo UI Icons) are not mapped on Odoo
+19.</li>
+<li>Weight, grade and optical size are fixed (400, 0, 24 px), as in Odoo
+20.</li>
+</ul>
+<p><strong>Updating the font.</strong> <tt class="docutils literal">scripts/build_font.py</tt> downloads Google’s
+three fonts at a pinned commit of
+<a class="reference external" href="https://github.com/google/material-design-icons">https://github.com/google/material-design-icons</a>, fixes their axes and
+rewrites <tt class="docutils literal">static/lib/material_symbols/</tt>. It needs <tt class="docutils literal">fonttools</tt> and
+<tt class="docutils literal">brotli</tt>, which are not Odoo dependencies; see the script’s docstring.
+Bump the commit in the script, run it, and review <tt class="docutils literal">SOURCE.md</tt> and the
+size of the files in the diff.</p>
+</div>
+<div class="section" id="bug-tracker">
+<h2><a class="toc-backref" href="#toc-entry-4">Bug Tracker</a></h2>
+<p>Bugs are tracked on <a class="reference external" href="https://github.com/OCA/server-tools/issues">GitHub Issues</a>.
+In case of trouble, please check there if your issue has already been reported.
+If you spotted it first, help us to smash it by providing a detailed and welcomed
+<a class="reference external" href="https://github.com/OCA/server-tools/issues/new?body=module:%20base_material_symbols%0Aversion:%2019.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**">feedback</a>.</p>
+<p>Do not contact contributors directly about support or help with technical issues.</p>
+</div>
+<div class="section" id="credits">
+<h2><a class="toc-backref" href="#toc-entry-5">Credits</a></h2>
+<div class="section" id="authors">
+<h3><a class="toc-backref" href="#toc-entry-6">Authors</a></h3>
+<ul class="simple">
+<li>CORSA.pro</li>
+</ul>
+</div>
+<div class="section" id="contributors">
+<h3><a class="toc-backref" href="#toc-entry-7">Contributors</a></h3>
+<ul class="simple">
+<li><a class="reference external" href="https://www.corsa.pro">CORSA.pro</a><ul>
+<li>Cliff Kujala &lt;<a class="reference external" href="mailto:cliff&#64;corsa.pro">cliff&#64;corsa.pro</a>&gt;</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="other-credits">
+<h3><a class="toc-backref" href="#toc-entry-8">Other credits</a></h3>
+<p>The icons are Google’s <a class="reference external" href="https://fonts.google.com/icons">Material
+Symbols</a>, from
+<a class="reference external" href="https://github.com/google/material-design-icons">https://github.com/google/material-design-icons</a>, under the Apache
+License 2.0 (<tt class="docutils literal">static/lib/material_symbols/LICENSE</tt>).</p>
+</div>
+<div class="section" id="maintainers">
+<h3><a class="toc-backref" href="#toc-entry-9">Maintainers</a></h3>
+<p>This module is maintained by the OCA.</p>
+<a class="reference external image-reference" href="https://odoo-community.org">
+<img alt="Odoo Community Association" src="https://odoo-community.org/logo.png" />
+</a>
+<p>OCA, or the Odoo Community Association, is a nonprofit organization whose
+mission is to support the collaborative development of Odoo features and
+promote its widespread use.</p>
+<p>This module is part of the <a class="reference external" href="https://github.com/OCA/server-tools/tree/19.0/base_material_symbols">OCA/server-tools</a> project on GitHub.</p>
+<p>You are welcome to contribute. To learn how please visit <a class="reference external" href="https://odoo-community.org/page/Contribute">https://odoo-community.org/page/Contribute</a>.</p>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
