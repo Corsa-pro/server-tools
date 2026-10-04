@@ -1,0 +1,138 @@
+// Copyright 2026 CORSA.pro (https://www.corsa.pro)
+// License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl).
+
+// Google's complete Material Symbols fonts, one per style (see
+// static/lib/material_symbols/SOURCE.md). Odoo 20 declares a 482-icon subset
+// of the Outlined style under the same family name; declared later, the
+// complete font takes its place. A browser only downloads the style it uses.
+$-material-symbols-styles: (
+    "outlined": "Material Symbols Outlined",
+    "rounded": "Material Symbols Rounded",
+    "sharp": "Material Symbols Sharp",
+);
+
+@each $-style, $-family in $-material-symbols-styles {
+    @font-face {
+        font-family: $-family;
+        font-style: normal;
+        font-weight: 400;
+        font-display: block;
+        src: url("/base_material_symbols/static/lib/material_symbols/material_symbols_#{$-style}.woff2")
+            format("woff2");
+    }
+
+    // The style chosen for the company (backend) or the website, set on
+    // <html data-material-symbols="rounded">.
+    html[data-material-symbols="#{$-style}"] {
+        --o-material-symbols-family: "#{$-family}";
+    }
+}
+
+// Odoo 20's icon markup: <i class="oi" data-icon="flag"/>. The icon name is
+// drawn through the font's ligatures. Names starting with "oi_" belong to
+// Odoo's own icon font on 20.0 and are left to it; so are Odoo 19's own
+// "oi-..." class icons, which carry no data-icon.
+.oi[data-icon]:not([data-icon^="oi_"]) {
+    font-family: var(
+        --o-material-symbols-family,
+        "Material Symbols Outlined"
+    ) !important;
+    font-style: normal;
+    font-weight: 400 !important;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    font-feature-settings: "liga";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    // Odoo 19 sizes .oi through ::before (--oi-font-size), so no font-size
+    // is set here: setting it on the element too would scale icons twice.
+    &::before {
+        display: inline-block;
+        content: attr(data-icon);
+        // WebKit would split the ligature at a hyphen.
+        word-break: keep-all;
+        // Every symbol is 1em wide. Until the font has loaded, the icon's
+        // name would take its place and push the layout around.
+        width: 1em;
+        overflow: hidden;
+    }
+
+    &.oi-filled {
+        font-variation-settings: "FILL" 1;
+    }
+}
+
+// Odoo 20's helper classes that Odoo 19 lacks (19 already has oi-fw,
+// oi-spin and oi-pulse).
+$-oi-sizes: (
+    "sm": 0.8em,
+    "lg": 1.25em,
+    "2x": 2em,
+    "3x": 3em,
+    "4x": 4em,
+    "5x": 5em,
+    "6x": 6em,
+    "7x": 7em,
+    "8x": 8em,
+    "9x": 9em,
+    "10x": 10em,
+);
+
+@each $-name, $-size in $-oi-sizes {
+    .oi-#{$-name} {
+        font-size: $-size;
+        @if $-name == "lg" {
+            vertical-align: middle;
+        }
+    }
+}
+
+.oi-stack {
+    position: relative;
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    line-height: 2em;
+    vertical-align: middle;
+}
+
+.oi-stack-1x,
+.oi-stack-2x {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.oi-stack-1x {
+    line-height: inherit;
+}
+
+.oi-stack-2x {
+    font-size: 2em;
+}
+
+.oi-rotate-90 {
+    transform: rotate(90deg);
+}
+
+.oi-rotate-180 {
+    transform: rotate(180deg);
+}
+
+.oi-rotate-270 {
+    transform: rotate(270deg);
+}
+
+.oi-flip-horizontal {
+    transform: scaleX(-1);
+}
+
+.oi-flip-vertical {
+    transform: scaleY(-1);
+}

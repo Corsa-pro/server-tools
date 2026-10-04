@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2026 CORSA.pro (https://www.corsa.pro)
+     License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl). -->
+<odoo>
+    <!-- Website, portal and login pages: the style is known on the server.
+         The backend sets it from the browser (material_symbols_style.esm.js). -->
+    <template id="frontend_layout" inherit_id="web.frontend_layout">
+        <xpath expr="//html" position="attributes">
+            <attribute
+                name="t-att-data-material-symbols"
+            >request and request.env['ir.http']._material_symbols_frontend_style()</attribute>
+        </xpath>
+    </template>
+</odoo>
